@@ -76,7 +76,7 @@ function Recursive(node)
     {
         return TypeOf(node);
     }
-    else if (node.left!= null && node.right!=null)
+    else// if (node.left!= null && node.right!=null)
     {
         return Recursive(node.left )+ node.operator + Recursive(node.right);
     }
@@ -126,7 +126,7 @@ function TypeOf(node) {
             prop = node.property.name;
         else if (node.property.type == 'Literal')
             prop = node.property.value;
-        else if (node.property.type == 'BinaryExpression')
+        else //if (node.property.type == 'BinaryExpression')
         {
             // let curr = node;
             prop = Recursive(node.property);
@@ -194,6 +194,8 @@ function WhileIfStatementParse(node, metadata) {
         cond = Recursive(node.test);
         //   node = curr;
     }
+    else
+        cond = TypeOf(node.test);
     parsedarr.push({ Line: metadata.start.line, Type: type, Name: '' ,Condition:cond, Value:'' });
 }
 

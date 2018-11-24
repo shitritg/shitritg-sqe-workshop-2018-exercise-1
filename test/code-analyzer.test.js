@@ -121,6 +121,14 @@ describe('The javascript parser', () => {
         );
     });
 });
+describe('The javascript parser', () => {
+    it('is parsing a while true', () => {
+        assert.equal(
+            JSON.stringify(parseCode('while (true) {}')),
+            '[{"Line":1,"Type":"while statement","Name":"","Condition":true,"Value":""}]'
+        );
+    });
+});
 
 
 

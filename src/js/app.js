@@ -8,7 +8,8 @@ $(document).ready(function () {
             table.deleteRow(1);
         let codeToParse = $('#codePlaceholder').val();
         let parsedCode = parseCode(codeToParse);
-        //  var  temp = JSON.stringify(parsedCode);
+        var  temp = JSON.stringify(parsedCode);
+        console.log(temp);
         $('#parsedCode').val(JSON.stringify(parsedCode, null, 2));
         showTable(parsedCode);
     });
