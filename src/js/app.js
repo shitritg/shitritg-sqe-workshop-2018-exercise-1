@@ -24,11 +24,11 @@ function showTable(parsedarr) {
         let cell3 = row.insertCell(2);
         let cell4 = row.insertCell(3);
         let cell5 = row.insertCell(4);
-        cell1.innerHTML = parsedarr[i].Line;
-        cell2.innerHTML = parsedarr[i].Type;
-        cell3.innerHTML = parsedarr[i].Name;
-        cell4.innerHTML = parsedarr[i].Condition;
-        cell5.innerHTML = parsedarr[i].Value;
+        cell1.textContent = parsedarr[i].Line;
+        cell2.textContent = parsedarr[i].Type;
+        cell3.textContent = parsedarr[i].Name;
+        cell4.textContent = parsedarr[i].Condition;
+        cell5.textContent = parsedarr[i].Value;
     }
 }
 
